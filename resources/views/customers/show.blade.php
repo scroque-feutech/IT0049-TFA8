@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<section class="card"><h1>Customer details</h1><p><strong>Full name:</strong> {{ $customer->full_name }}</p><p><strong>Email:</strong> {{ $customer->email }}</p><p><strong>Phone:</strong> {{ $customer->phone }}</p><a class="button" href="{{ route('customers.edit', $customer) }}">Edit</a> <a href="{{ route('customers.index') }}">Back to list</a></section>@endsection

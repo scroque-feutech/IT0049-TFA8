@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<section class="card"><h1>User details</h1><p><strong>Username:</strong> {{ $user->username }}</p><p><strong>Full name:</strong> {{ $user->full_name }}</p><p><strong>Email:</strong> {{ $user->email }}</p><p>Avatar: @if($user->avatar)<img class="avatar large" src="{{ route('avatars.show', basename($user->avatar)) }}" alt="Avatar">@else No avatar uploaded. @endif</p><a class="button" href="{{ route('users.edit', $user) }}">Edit</a> <a href="{{ route('users.index') }}">Back to list</a></section>@endsection
